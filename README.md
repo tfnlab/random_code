@@ -1,6 +1,38 @@
 # random_code
 random code 
 
+Twitter Spaces Audio Quality Testing with Selenium WebDriver
+
+This GitHub repository contains Java code that utilizes Selenium WebDriver to perform audio quality testing on Twitter Spaces. The code runs multiple instances of Mozilla Firefox as clients, with ten clients being launched each time the code is executed.
+Prerequisites
+
+To run this code, you need to have the following:
+
+    Java Development Kit (JDK) installed on your machine.
+    Mozilla Firefox web browser.
+    Selenium WebDriver Java bindings.
+
+Setup Instructions
+
+    Clone this repository to your local machine.
+    Install the necessary dependencies and libraries.
+    Update the code as required for your specific testing needs.
+
+Running the Code
+
+    Open the cloned repository in your preferred Java IDE.
+    Locate the Main.java file and run it.
+    The code will launch ten instances of Mozilla Firefox as clients to test Twitter Spaces' audio quality.
+    Analyze the results to evaluate the audio quality of Twitter Spaces.
+
+Updating the Code
+
+You can modify the code according to your specific requirements. Feel free to make any necessary updates or improvements to enhance the audio quality testing process.
+
+Please note that this code is subject to change and improvements. Make sure to check for any updates or newer versions available in this repository.
+
+For any issues or questions, please open an issue in the GitHub repository. Contributions and feedback are highly appreciated!
+
 download sel.jar 
 
 use following command to execute code 
