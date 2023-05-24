@@ -1,0 +1,136 @@
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.time.Duration;
+import java.util.Set;
+import java.util.Vector;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class TSpaces_v2 {
+
+public TSpaces_v2() {
+// TODO Auto-generated constructor stub
+}
+
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+// TODO Auto-generated method stub
+/*
+try {
+System.setProperty("webdriver.gecko.driver","/Users/armenmerikyan/Downloads/geckodriver"); // Setting system properties of FirefoxDriver
+WebDriver driver = new FirefoxDriver(); //Creating an object of FirefoxDriver
+driver.manage().window().maximize();
+driver.manage().deleteAllCookies();
+driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+for(int j=0;j>4;j++) {
+driver.get("https://api.opensea.io/api/v1/asset/0x1d48842ed318b739a2f8d251bc53fefac6d96372/" + j + "/?force_update=true");
+// driver.get("https://play.tfnlab.com");
+Thread.sleep(10000);
+}
+driver.quit();
+}catch(Exception ex) {
+ex.printStackTrace();
+}
+*/
+try {
+for(int j=0;j<100;j++) {
+FirefoxOptions options = new FirefoxOptions();
+options.addPreference("browser.link.open_newwindow", 3);
+
+options.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
+
+System.setProperty("webdriver.gecko.driver","C:/wd/geckodriver.exe");
+
+// System.setProperty("webdriver.gecko.driver","/Users/hrn/Desktop/wd/geckodriver"); // Setting system properties of FirefoxDriver
+WebDriver driver = new FirefoxDriver(options); //Creating an object of FirefoxDriver
+// driver.manage().window().maximize();
+driver.manage().deleteAllCookies();
+driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+        String glbUrl =  "https://twitter.com/TheKingGaston/status/1661372820192997376?s=20";
+driver.get(glbUrl); 
+
+driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+
+       Vector<String> animalVec = new Vector<String>();
+try {
+
+
+
+
+ 
+ 
+
+System.out.println(glbUrl); 
+WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("body")));
+
+WebElement listenLiveElement = driver.findElement(By.xpath("//span[contains(text(), 'Listen live')]"));
+       listenLiveElement.click();
+
+wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[contains(text(), 'Join this Space')]")));
+
+WebElement joinLiveElement = driver.findElement(By.xpath("//span[contains(text(), 'Join this Space')]"));
+joinLiveElement.click();
+
+wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[contains(text(), 'Got it')]")));
+
+WebElement gotitLiveElement = driver.findElement(By.xpath("//span[contains(text(), 'Got it')]"));
+gotitLiveElement.click();
+
+wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[contains(text(), 'Not now')]")));
+
+WebElement notnowLiveElement = driver.findElement(By.xpath("//span[contains(text(), 'Not now')]"));
+notnowLiveElement.click();
+
+
+Thread.sleep(5000);
+driver.manage().window().minimize();
+// driver.findElement(By.cssSelector("div[data-testid='space'] span[role='button'][aria-label='Listen live']")).sendKeys(Keys.ENTER);
+// driver.findElement(By.cssSelector("body")).sendKeys(Keys.TAB);
+// driver.findElement(By.cssSelector("body")).sendKeys(Keys.TAB);
+// driver.findElement(By.cssSelector("body")).sendKeys(Keys.ENTER);
+/// driver.findElement(By.cssSelector("body")).sendKeys(Keys.TAB);
+// driver.findElement(By.cssSelector("body")).sendKeys(Keys.ENTER);
+// driver.findElement(By.cssSelector("div[data-testid='space'] span[role='button'][aria-label='Join this Space']")).sendKeys(Keys.ENTER);
+        
+       
+       /**
+       {
+           "7999": {
+             "chest": "Plate Mail",
+             "foot": "Hard Leather Boots",
+             "hand": "Chain Gloves",
+             "head": "Helm",
+             "neck": "\"Demon Moon\" Pendant of the Twins +1",
+             "ring": "Bronze Ring of Detection",
+             "waist": "Ornate Belt",
+             "weapon": "Warhammer"
+           }
+         },
+       **/
+//driver.quit();
+
+} catch (Exception ex) {
+   ex.printStackTrace();
+}
+
+}
+}catch(Exception ex) {
+ex.printStackTrace();
+}
+}
+
+}
