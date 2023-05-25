@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Set;
 import java.util.Vector;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeUnit;  
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -58,7 +58,7 @@ WebDriver driver = new FirefoxDriver(options); //Creating an object of FirefoxDr
 // driver.manage().window().maximize();
 driver.manage().deleteAllCookies();
 driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
-        String glbUrl =  "https://twitter.com/TheKingGaston/status/1661372820192997376?s=20";
+        String glbUrl =  "https://twitter.com/nocexeth/status/1661756708123967494?s=20";
 driver.get(glbUrl); 
 
 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
